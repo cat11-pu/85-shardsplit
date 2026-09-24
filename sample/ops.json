@@ -1,0 +1,17 @@
+{
+  "split_at": "m",
+  "migrate_count": 10,
+  "cutover_invariant": true,
+  "read_keys": ["alpha", "beta", "mu", "nu", "zeta"],
+  "ops": [
+    {"op": "put", "key": "alpha", "value": "1"},
+    {"op": "put", "key": "beta", "value": "2"},
+    {"op": "put", "key": "mu", "value": "3"},
+    {"op": "put", "key": "nu", "value": "4"},
+    {"op": "put", "key": "zeta", "value": "5"}
+  ],
+  "dual_writes": [
+    {"key": "mu", "value": "3b"},
+    {"key": "alpha", "value": "1b"}
+  ]
+}
