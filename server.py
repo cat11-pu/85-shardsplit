@@ -15,6 +15,7 @@ ROUTES = {
     "/migrate": lambda payload: ENGINE.migrate_step(payload["count"]),
     "/cutover": lambda payload: ENGINE.cutover(payload["shard"]),
     "/recover": lambda payload: ENGINE.recover(),
+    "/persist": lambda payload: ENGINE.persist() and {"persisted": True},
 }
 
 
